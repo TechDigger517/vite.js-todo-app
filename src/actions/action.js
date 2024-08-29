@@ -1,4 +1,9 @@
-import { ADD_TODO, COMPLETE_TODO, DELETE_TODO, UPDATE_TODO } from "./actionTypes";
+import {
+  ADD_TODO,
+  COMPLETE_TODO,
+  DELETE_TODO,
+  UPDATE_TODO,
+} from "./actionTypes";
 
 export function addTodo(data) {
   return {
@@ -12,15 +17,15 @@ export function deleteTodo(id) {
     id: id,
   };
 }
+export function toggle(id) {
+  return {
+    type: COMPLETE_TODO,
+    id: id,
+  };
+}
 export function updateTodo(data) {
   return {
     type: UPDATE_TODO,
     data: data,
-  };
-}
-export function complete(id) {
-  return {
-    type: COMPLETE_TODO,
-    id:id,
   };
 }

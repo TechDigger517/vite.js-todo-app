@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ADD_TODO } from "../actions/actionTypes";
-import { complete, deleteTodo } from "../actions/action";
+import { toggle, deleteTodo, toggle } from "../actions/action";
 import { Modal } from "../components/Modal";
 
 const Todo = () => {
@@ -35,7 +35,7 @@ const Todo = () => {
                   type="checkbox"
                   value={value.completed}
                   onChange={() => {
-                    dispatch(complete(index));
+                    dispatch(toggle(index));
                   }}
                 ></input>
               </td>
